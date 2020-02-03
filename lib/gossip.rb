@@ -27,11 +27,13 @@ class Gossip
     Gossip.all[id-1]
   end
 
+  def self.edit(author, content)
+
+    @author = author
+    @content = content
+
+    CSV.open("./db/gossip.csv", 'wb') do |csv|
+      csv << [@author, @content]
+    end
+  end
 end #fin classe
-
-
-# John = Gossip.new("abc", "dfg")
-# John.save
-# Arno = Gossip.new("plagiat", "oko")
-# Arno.save
-# Arno.find(2)

@@ -1,6 +1,14 @@
 <html>
   <head>
     <title>Bienvenue chez THP Gossip Land</title>
+    <style>
+      body {
+        display :flex;
+        flex-direction:column;
+        align-items:center;
+      }
+      h1   {color: #901811;}
+    </style>
   </head>
   <body>
   <% if (1..Gossip.all.length).include? id %>
@@ -8,9 +16,11 @@
     <br/>
     <h3> L'auteur du gossip est : </h3>
     <p><%= gossip.author %> </p>
-    <br/> 
+
     <h3> Le gossip est le suivant : </h3>
     <p> <%= gossip.content %> </p>
+    <br>
+    <p><a href =<%="#{id}/edit"%>>éditer le potin</a></p>
   <% end %>
   </body>
   

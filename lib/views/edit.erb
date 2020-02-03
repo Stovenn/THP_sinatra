@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Editer un potin</title>
+
+    <style>
+      body {
+        display :flex;
+        flex-direction:column;
+        align-items:center;
+      }
+      h1   {color: #901811;}
+    </style>
+  </head>
+  <body>
+    <div>
+    <% if (1..Gossip.all.length).include? id %>
+    <h2>Voici le gossip n°<%=id%> </h2>
+    <br/>
+    <h3> L'auteur du gossip est : </h3>
+    <p><%= gossip.author %> </p>
+
+    <h3> Le gossip est le suivant : </h3>
+    <p> <%= gossip.content %> </p><br>
+  <% end %>
+    </div>
+  <hr>
+    <div>
+    <h1>Edite ton potin !</h1>
+    <p>Balance ton potin via le formulaire ci-dessous</p>
+    <form action=<%="/gossips/#{id}/edit"%> method='POST'>
+      Auteur :  <input type='text' name='gossip_author'/><br/>
+      Potin : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+    </form>
+    </div>
+  </body>
+</html>
