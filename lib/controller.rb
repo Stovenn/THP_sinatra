@@ -21,8 +21,8 @@ class ApplicationController < Sinatra::Base
     "Voici le numéro du potin que tu veux : #{params["id"]}!"
   end
 
-  #get '/gossips/:id' do
-  #Gossip.find(id)
-  #end
+  get '/gossips/:id' do
+    Gossip.find(id)
+  end
 
 end
