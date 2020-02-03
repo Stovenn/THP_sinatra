@@ -30,8 +30,8 @@ class Gossip
 end #fin classe
 
 
-John = Gossip.new("abc", "dfg")
-John.save
-Arno = Gossip.new("plagiat", "oko")
-Arno.save
-Arno.find(2)
+# John = Gossip.new("abc", "dfg")
+# John.save
+# Arno = Gossip.new("plagiat", "oko")
+# Arno.save
+# Arno.find(2)
