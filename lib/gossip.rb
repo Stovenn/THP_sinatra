@@ -13,5 +13,4 @@ class Gossip
     end
   end
 
-
 end #fin classe
