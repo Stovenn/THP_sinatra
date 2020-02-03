@@ -3,4 +3,10 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
+  get '/gossips/new/' do  
+    erb :new_gossip
+  end
+  
+
+
 end
