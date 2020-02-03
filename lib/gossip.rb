@@ -1,7 +1,8 @@
 require 'csv'
 
 class Gossip
-    attr_accessor :author, :content
+    attr_accessor :author, :content, :id
+
   def initialize(author, content)
     @author = author
     @content = content
@@ -20,6 +21,10 @@ class Gossip
       all_gossips << Gossip.new(csv_line[0], csv_line[1])
     end
     return all_gossips #on retourne un array rempli d'objets Gossip
+  end
+
+  def find
+
   end
 
 end #fin classe
